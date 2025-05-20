@@ -1,0 +1,8 @@
+.footer-links_content {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 45px;
+}
+.product-card__addtocart-icon i {
+    padding: 3px;
+}
