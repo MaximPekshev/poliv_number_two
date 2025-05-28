@@ -1,19 +1,16 @@
 <template>
-    <BreadcrumbComponent name="Корзина"  />
-    <CartContentComponent />
+    <BreadcrumbComponent name="Дилерам"  />
     <PageSEOComponent />
 </template>
 
 <script>
 import { defaultSEO } from '@/main'
 import BreadcrumbComponent from '@/components/Basic/BreadcrumbComponent.vue'
-import CartContentComponent from '@/components/Cart/CartContentComponent.vue'
 import PageSEOComponent from '@/components/Widgets/PageSEOComponent.vue'
 export default {
-    name: 'CartView',
+    name: 'ForDealersView',
     components: {
         BreadcrumbComponent,
-        CartContentComponent,
         PageSEOComponent
     },
      watch: {

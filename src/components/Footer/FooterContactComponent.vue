@@ -1,36 +1,47 @@
 <template>
     <div class="site-footer__widget footer-contacts">
-        <h5 class="footer-contacts__title">Contact Us</h5>
+        <img :src="logo" alt="" width="300" class="footer-contacts__logo" />
         <div class="footer-contacts__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Integer in feugiat lorem.
+            Rain-block профессиональные системы автополива
         </div>
         <address class="footer-contacts__contacts">
             <dl>
-                <dt>Phone Number</dt>
-                <dd>+1 (800) 060-07-30</dd>
+                <dt>Телефон</dt>
+                <dd>8 (920) 577-2244</dd>
             </dl>
             <dl>
-                <dt>Email Address</dt>
-                <dd>red-parts@example.com</dd>
+                <dt>Email</dt>
+                <dd>89205772244@mail.ru</dd>
             </dl>
             <dl>
-                <dt>Our Location</dt>
-                <dd>715 Fake Street, New York 10021 USA</dd>
+                <dt>Адрес</dt>
+                <dd></dd>
             </dl>
             <dl>
-                <dt>Working Hours</dt>
-                <dd>Mon-Sat 10:00pm - 7:00pm</dd>
+                <dt>Режим работы</dt>
+                <dd></dd>
             </dl>
         </address>
     </div>
 </template>
 
 <script>
+import logo from '@/assets/images/logo/logo_white.png'
 export default {
   name: 'FooterContactComponent',
+  data () {
+    return {
+      logo
+    }
+  },
   components: {
     // Add any child components here if needed
   }
 }
 </script>
+
+<style scoped>
+.footer-contacts__logo {
+    padding-bottom: 30px;
+}
+</style>

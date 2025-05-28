@@ -1,8 +1,17 @@
-.DS_Store
 node_modules
-/dist
+.DS_Store
+design
+*.log
+packages/test
+dist
 dist.zip
-
+temp
+.vuerc
+.version
+.versions
+.changelog
+package-lock.json
+.vscode
 
 # local env files
 .env.local

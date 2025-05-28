@@ -25,13 +25,17 @@ import MessageComponent from '@/components/Widgets/MessageComponent.vue'
 export default {
   setup() {
     const themeOverrides = {
-      // common: {
-      //   primaryColorHover: '#184ca0',
-      //   primaryColorPressed: '184ca0',
-      // },
-      // Input: {
-      //   boxShadowFocus: '2px #cadfff',
-      // }
+      common: {
+        primaryColorHover: '#262626',
+        primaryColorPressed: '#262626',
+      },
+      Input: {
+        caretColor: '#262626',
+        boxShadowFocus: '0 0 0 2px rgba(38, 38, 38, 0.2)',
+      },
+      Spin: {
+        color: '#262626',
+      }
     }
     return {
       themeOverrides

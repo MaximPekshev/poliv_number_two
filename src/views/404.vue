@@ -1,22 +1,16 @@
 <template>
-    <BreadcrumbComponent name="Корзина"  />
-    <CartContentComponent />
-    <PageSEOComponent />
+    <PageNotFoundComponent />
 </template>
 
 <script>
+import PageNotFoundComponent from '@/components/Widgets/PageNotFoundComponent.vue'
 import { defaultSEO } from '@/main'
-import BreadcrumbComponent from '@/components/Basic/BreadcrumbComponent.vue'
-import CartContentComponent from '@/components/Cart/CartContentComponent.vue'
-import PageSEOComponent from '@/components/Widgets/PageSEOComponent.vue'
 export default {
-    name: 'CartView',
+    name: 'PageNotFound',
     components: {
-        BreadcrumbComponent,
-        CartContentComponent,
-        PageSEOComponent
+        PageNotFoundComponent
     },
-     watch: {
+    watch: {
         '$route': {
             immediate: true,
             handler() {

@@ -59,7 +59,7 @@
                                         <td>
                                             00.00
                                             <div>
-                                                <a href="#" disabled >Рассчитать доставку</a>
+                                                <a href="#">Рассчитать доставку</a>
                                             </div>
                                         </td>
                                     </tr>
@@ -81,16 +81,24 @@
         </div>
     </div>
     <div class="block-space block-space--layout--before-footer"></div>
+    <!-- <DeliveryFormComponent :visibility="deliveryFormVisible" />    -->
 </template>
 
 <script>
 import CartItemComponent from '@/components/Cart/CartItemComponent.vue'
 import CartLoadingItemComponent from '@/components/Cart/CartLoadingItemComponent.vue'
+// import DeliveryFormComponent from '@/components/Widgets/DeliveryFormComponent.vue'
 export default {
     name: 'CartContentComponent',
+    data() {
+        return {
+            // deliveryFormVisible: false,
+        }
+    },
     components: {
         CartItemComponent,
-        CartLoadingItemComponent
+        CartLoadingItemComponent,
+        // DeliveryFormComponent
     },
     computed: {
         cartItems() {

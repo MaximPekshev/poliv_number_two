@@ -4,6 +4,8 @@ import goods_list from './Modules/Catalog/goods_list'
 import good from './Modules/Catalog/good'
 import categories_list from './Modules/Catalog/categories_list'
 import cart from './Modules/cart'
+import regions from './Modules/Delivery/regions'
+import category from './Modules/Catalog/category'
 
 export default createStore({
     state: {
@@ -18,7 +20,9 @@ export default createStore({
         goods_list,
         good,
         categories_list,
-        cart
+        cart,
+        regions,
+        category
     },
     plugins: [createPersistedState()]
 })

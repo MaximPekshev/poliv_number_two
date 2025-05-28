@@ -1,5 +1,6 @@
 <template>
-    <div class="block-header block-header--has-breadcrumb block-header--has-title">
+    <PageNotFoundComponent v-if="goodInfoRequestError" />
+    <div v-if="!goodInfoRequestError" class="block-header block-header--has-breadcrumb block-header--has-title">
       <div class="container">
           <div class="block-header__body">
               <nav class="breadcrumb block-header__breadcrumb" aria-label="breadcrumb">
@@ -28,7 +29,7 @@
           </div>
       </div>
     </div>
-    <div class="block-split">
+    <div v-if="!goodInfoRequestError" class="block-split">
         <div class="container">
             <div class="block-split__row row no-gutters">
                 <div class="block-split__item block-split__item-content col-auto">
@@ -137,7 +138,12 @@
                                                 </tr>
                                                 <tr>
                                                     <th>Категория</th>
-                                                    <td><a href="">{{ good.category.name }}</a></td>
+                                                    <td>
+                                                        <router-link :to="{ 
+                                                                name: 'catalog', 
+                                                                query: {category_id: good.category.id, page: 1} 
+                                                            }">{{ good.category.name }}</router-link>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <th>Остаток</th>
@@ -187,9 +193,13 @@
 <script>
 import { backendPath } from '@/main.js'
 import DefaultImage from '@/assets/images/product-1-700x700.jpg'
+import PageNotFoundComponent from '@/components/Widgets/PageNotFoundComponent.vue'
 export default {
-  name: 'GoodContentComponent',
-  setup() {
+    name: 'GoodContentComponent',
+    components: {
+        PageNotFoundComponent,
+    },
+    setup() {
         return {
             validator: (x) => x > 0,
         }
@@ -229,6 +239,9 @@ export default {
         phrase () {
             return this.good.phrase
         },
+    },
+    mounted () {
+        this.loadGoodInfo(this.$route.params.good_id)
     },
     methods: {
         loadGoodInfo(id) {

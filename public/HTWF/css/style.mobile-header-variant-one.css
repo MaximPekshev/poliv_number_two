@@ -308,7 +308,7 @@
 }
 
 .mobile-indicator__counter:before {
-  background-color: #006847;
+  background-color: #262626;
 }
 
 /*
@@ -672,7 +672,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #006847;
+  background-color: #262626;
   z-index: -1;
   border-radius: 2.5px;
 }
@@ -812,7 +812,7 @@
 
 .mobile-menu__contacts {
   text-align: center;
-  padding: 16px 20px 14px;
+  padding: 3px 20px;
   -webkit-transition: background .2s;
   transition: background .2s;
 }
