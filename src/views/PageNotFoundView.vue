@@ -6,7 +6,7 @@
 import PageNotFoundComponent from '@/components/Widgets/PageNotFoundComponent.vue'
 import { defaultSEO } from '@/main'
 export default {
-    name: 'PageNotFound',
+    name: 'PageNotFoundView',
     components: {
         PageNotFoundComponent
     },

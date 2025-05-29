@@ -6,13 +6,13 @@ import ForDealersView from '@/views/ForDealersView.vue'
 import PaymentView from '@/views/PaymentView.vue'
 import DeliveryView from '@/views/DeliveryView.vue'
 import WarrantyView from '@/views/WarrantyView.vue'
-import PageNotFound from '@/views/404.vue'
+import PageNotFoundView from '@/views/PageNotFoundView.vue'
 
 const routes = [
     { 
         path: '/:pathMatch(.*)*',
         name: 'PageNotFound',
-        component: PageNotFound 
+        component: PageNotFoundView 
     },
     {
         path: '/',
